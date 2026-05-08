@@ -1,2 +1,2 @@
 # IDT-Workshop
-IDT video coding workshop matertials
+IDT vibe coding workshop matertials
