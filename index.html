@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare and discover syllabi for the Biomedical Data Science program.">
+    <title>Syllabus Compare | Biomedical Data Science</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Course</h1>
+            <p>Compare syllabi across the Biomedical Data Science program.</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by keywords, course name, or topic...">
+                <button id="searchBtn">Search</button>
+            </div>
+            <div class="keyword-tags" id="keywordTags">
+                <!-- Tags will be dynamically injected here -->
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>Available Courses</h2>
+            <p id="resultsCount">Showing all courses</p>
+        </div>
+        
+        <div class="course-grid" id="courseGrid">
+            <!-- Course cards will be dynamically injected here -->
+        </div>
+    </main>
+
+    <!-- Comparison Drawer -->
+    <div class="compare-drawer" id="compareDrawer">
+        <div class="drawer-content">
+            <div class="drawer-info">
+                <span id="compareCount">0</span> courses selected
+            </div>
+            <div class="drawer-actions">
+                <button class="btn-secondary" id="clearCompareBtn">Clear</button>
+                <button class="btn-primary" id="compareBtn" disabled>Compare Syllabi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div class="modal-overlay" id="compareModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+            <h2>Syllabus Comparison</h2>
+            <div id="suggestionBanner" class="suggestion-banner hidden">
+                <span class="badge badge-best-fit">Best Fit</span>
+                <p id="suggestionText">Based on your keywords, we recommend...</p>
+            </div>
+            <div class="comparison-grid" id="comparisonGrid">
+                <!-- Comparison columns will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
